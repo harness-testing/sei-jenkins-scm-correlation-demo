@@ -103,7 +103,7 @@ pipeline {
                 dir('scm-demo-src') {
                     script {
                         String digest = sh(
-                            script: "shasum -a 256 target/sei-scm-demo.jar | awk '{print $1}'",
+                            script: "shasum -a 256 target/sei-scm-demo.jar | awk '{print \$1}'",
                             returnStdout: true
                         ).trim()
                         String targetShortSha = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
