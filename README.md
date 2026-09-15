@@ -44,6 +44,8 @@ BUILD_REF=build-2
 BASELINE_REF=build-1
 ```
 
+
+
 - Range `build-1..build-2` → **commits B and C**
 - Commit B adds `GreetingService`; commit C adds input normalization
 
