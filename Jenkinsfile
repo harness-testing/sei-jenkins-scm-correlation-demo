@@ -13,11 +13,5 @@ pipeline {
                 sh 'git log -5 --oneline && git rev-parse HEAD'
             }
         }
-
-        stage('Slow stage (abort test)') {
-            steps {
-                sleep 300
-            }
-        }
     }
 }
