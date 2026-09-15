@@ -22,6 +22,7 @@ Jenkinsfile                       # Declarative pipeline with SCM correlation lo
 
 ## Three demo builds
 
+
 Run the pipeline three times in order. Each run checks out `BUILD_REF` and computes commits
 **since** `BASELINE_REF` (exclusive..inclusive range). These are commits *introduced since the
 previous successful build*, not every historical commit whose code remains in the JAR.
