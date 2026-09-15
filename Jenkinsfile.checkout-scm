@@ -10,25 +10,7 @@ pipeline {
 
         stage('Build marker') {
             steps {
-                sh '''
-                    set -eu
-                    echo "Branch: ${BRANCH_NAME:-unknown}"
-                    echo "GIT_COMMIT: ${GIT_COMMIT:-unknown}"
-                    git log -5 --oneline
-                    git rev-parse HEAD
-                '''
-            }
-        }
-    }
-
-    post {
-        always {
-            script {
-                echo '=== checkout scm verification build complete ==='
-                echo "Job: ${env.JOB_NAME}"
-                echo "Build: ${env.BUILD_NUMBER}"
-                echo "Branch: ${env.BRANCH_NAME ?: 'N/A'}"
-                echo "GIT_COMMIT: ${env.GIT_COMMIT ?: 'N/A'}"
+                sh 'git log -5 --oneline && git rev-parse HEAD'
             }
         }
     }
