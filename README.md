@@ -3,7 +3,8 @@
 A minimal, dependency-free Java 17 project that demonstrates how a Jenkins pipeline computes
 `SEI_SCM_COMMIT_IDS` — the Git commits introduced since the previous successful build.
 
-The pipeline uses only `git`, `javac`, `jar`, and `java`. No Maven, Gradle, or Spring.
+
+The pipeline uses only `git`, `javac`, `jar`, and `java`. No Maven, Gradle, or Spring..
 
 ## Repository layout
 
